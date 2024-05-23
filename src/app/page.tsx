@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="h-screen w-screen bg-[#19a1ad] flex items-center justify-center">
 
-      <div className="w-[320px] h-[340px] rounded-[15px] overflow-hidden bg-white">
+      <div className="w-[320px] h-[340px] rounded-[15px] overflow-hidden bg-white z-9">
         <div className="top-bg h-[130px]">
         </div>
         <div className="flex items-center justify-center">
@@ -33,12 +33,8 @@ export default function Home() {
         </div>
       </div>
 
-      <span className="absolute -top-[65%] pointer-events-none">
-        <Image src={circleBGTop} width={1000} height={1000} alt="background" />
-      </span>
-      <span className="absolute -bottom-[65%] right-0 pointer-events-none">
-        <Image src={circleBGBottom} width={1000} height={1000} alt="background" />
-      </span>
+      <Image src={circleBGTop} width={1000} height={1000} alt="background" className="absolute -top-[75%] pointer-events-none" />
+      <Image src={circleBGBottom} width={1000} height={1000} alt="background" className="absolute -bottom-[75%] right-0 pointer-events-none z-1" />
     </main>
   )
 }
